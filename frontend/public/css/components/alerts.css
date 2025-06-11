@@ -1,0 +1,21 @@
+.alerta {
+  display: none;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.alerta.exito {
+  background-color: #e6ffec;
+  color: #1a7f44;
+  border: 1px solid #86efac;
+}
+
+.alerta.error {
+  background-color: #ffe6e6;
+  color: #9f1239;
+  border: 1px solid #fca5a5;
+}

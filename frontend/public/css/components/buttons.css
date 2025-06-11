@@ -1,0 +1,60 @@
+/* 🔹 Botón general */
+button {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 🔹 Efecto hover */
+button:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.05);
+}
+
+/* 🔹 Efecto al presionar */
+button:active {
+    background-color: #d62545;
+    transform: scale(0.95);
+}
+
+/* 🔹 Botón deshabilitado */
+button:disabled {
+    background-color: #5A5A5A;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 🔹 Variaciones específicas */
+.btn-primary {
+    background-color: var(--color-primario);
+}
+
+.btn-secondary {
+    background-color: #46658C;
+}
+
+.btn-danger {
+    background-color: #A62D43;
+}
+
+/* 🔹 Botones circulares (para iconos) */
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 Botones grandes */
+.btn-large {
+    font-size: 18px;
+    padding: 14px 28px;
+}

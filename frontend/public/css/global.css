@@ -1,0 +1,185 @@
+/* 🔹 Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* 🔹 Variables para colores y fuentes */
+:root {
+  --color-fondo: #04080D;            /* Base oscura */
+  --color-primario: #F24171;         /* Acento vibrante */
+  --color-secundario: #F5FBEF;         /* Texto claro */
+  --color-hover: #A62D43;            /* Efecto en hover */
+  --sombra: rgba(0, 0, 0, 0.4);        /* Sombra sutil */
+  --fuente-principal: 'Montserrat', sans-serif;
+  --fuente-titulos: 'Orbitron', sans-serif;
+}
+
+/* 🔹 Reset General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔹 Estilos generales del cuerpo y encabezados */
+
+.brand a {
+  text-decoration: none;
+  color: inherit;
+}
+#contenedor-productos a {
+  text-decoration: none;
+  color: inherit; /* Para que el color se herede y no afecte la apariencia del producto */
+}
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-secundario);
+  line-height: 1.6;
+}
+
+h1 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-primario);
+  text-shadow: 1px 1px var(--sombra);
+}
+
+h2 {
+  font-family: var(--fuente-titulos);
+  color: #CCCCCC;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-secundario);
+  text-shadow: 1px 1px var(--sombra);
+}
+
+/* 🔹 Botones Globales */
+button {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #d62545;
+  transform: scale(0.95);
+}
+
+.box-shadow {
+  box-shadow: 0px 4px 8px var(--sombra);
+  border-radius: 10px;
+}
+
+/* 🔹 Barra lateral de redes sociales */
+#redes-sociales {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#redes-sociales ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#redes-sociales li {
+  margin-bottom: 10px;
+}
+
+#redes-sociales a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#redes-sociales a:hover {
+  transform: scale(1.1);
+}
+
+#redes-sociales img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔹 Estilos del Main (para páginas que muestran productos, etc.) */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.producto {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* 🔹 Estilos del Footer (definición unificada) */
+footer {
+  background: linear-gradient(135deg, #04080D, #1b1b24);
+  color: var(--color-secundario);
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  height: 120px; /* Altura fija (ajústala si es necesario) */
+  box-shadow: 0px -2px 12px rgba(248, 248, 248, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Contenedor Global para Sticky Footer */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Se asegura que el área principal se expanda */
+main {
+  flex: 1;
+}
+
+/* 🔹 Media Queries para adaptación */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

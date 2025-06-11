@@ -1,0 +1,182 @@
+/* ========================================
+   Categories Page CSS (Actualizado: Colores & Estética)
+======================================== */
+
+/* Forzar que el contenedor principal se muestre como bloque (para evitar interferencias) */
+main {
+  display: block !important;
+}
+
+/* =======================
+   Secciones de la Página
+========================== */
+
+/* Sección que envuelve la parte de la categoría */
+.seccion-categorias {
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Sección que envuelve la parte de los productos (apilados verticalmente) */
+.seccion-productos {
+  width: 100%;
+  display: block;
+  margin-top: 20px;
+  gap: 20px; /* Espacio entre productos */
+}
+
+/* ========================================
+   Contenedor de la Categoría Seleccionada
+======================================== */
+.categoria-seleccionada {
+  width: 400px;              /* Se reduce el ancho para evitar demasiado espacio vacío */
+  max-width: 80%;
+  margin: 20px auto;         /* Centrado horizontal */
+  padding: 20px;
+  background: #F24171; /* Color de fondo vibrante */
+  border: 1px solid #34495e;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;        /* Permite posicionar el menú desplegable de forma relativa */
+  
+  /* Centramos internamente los elementos con Flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;               /* Texto en blanco para buen contraste */
+}
+
+/* Título de la Categoría */
+#titulo-categoria {
+  font-size: 24px;
+  color: #e6e3e3;
+  margin-bottom: 10px;
+}
+
+/* ----------- Botón para Desplegar el Menú ----------- */
+.btn-toggle-categorias {
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* ----------- Menú Desplegable de Categorías ----------- */
+.menu-categorias {
+  display: none;             /* Se controla mediante JavaScript */
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  
+  background-color: #34495e;
+  border: 1px solid #3d5063;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 90%;
+  max-width: 300px;
+  
+  /* Si se usa Flexbox para centrar el contenido */
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-categorias.active {
+  display: flex;
+}
+
+.menu-categorias ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.menu-categorias ul li {
+  margin: 5px 0;
+  text-align: center;
+}
+
+.menu-categorias ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.menu-categorias ul li a:hover {
+  color: #F24171;
+}
+
+/* ========================================
+   Contenedor de Productos
+======================================== */
+.productos {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;               /* Mayor separación entre tarjetas de producto */
+  justify-content: center;
+  clear: both;
+  gap: 100px;               /* Espacio entre tarjetas */
+  margin-top: 100px; /* Espacio superior para evitar superposición con el menú desplegable */
+}
+
+/* ========================================
+   Tarjeta Individual de Producto
+======================================== */
+.producto {
+  /* Fondo oscuro para alinear con estilos globales */
+  background: #2c3e50;  
+  border: 1px solid #4c667e;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;              /* Tarjeta de tamaño reducido */
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  gap: 100px;            /* Espacio entre tarjetas */
+}
+
+.producto:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del Producto: altura fija para alinear el inicio del texto */
+.producto img {
+  display: block;
+  width: 100%;
+  height: 150px;             /* Altura fija */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Nombre del Producto */
+.producto h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+  color: #ecf0f1;            /* Texto claro para buen contraste */
+}
+
+/* Información adicional del Producto (precio, etc.) */
+.producto p {
+  font-size: 16px;
+  margin: 0;
+  color: #bdc3c7;            /* Gris claro para mejorar la legibilidad */
+}
+
+/* ========================================
+   Mensajes de Error
+======================================== */
+.mensaje-error {
+  font-size: 18px;
+  color: #e74c3c;
+  text-align: center;
+  padding: 20px;
+}

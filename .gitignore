@@ -1,0 +1,14 @@
+# Node.js
+**/node_modules/
+**/.env
+.env.local
+
+# Logs y archivos del sistema
+*.log
+.DS_Store
+Thumbs.db
+
+# VSCode y temporales
+.vscode/
+*.swp
+*.swo

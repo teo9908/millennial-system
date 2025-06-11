@@ -1,0 +1,81 @@
+/* about.css */
+
+/* Contenedor principal para la información de la página "Sobre Nosotros" */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espacio entre cada sección */
+}
+
+/* Estilos generales para cada sección de contenido */
+main section {
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil acorde al tema oscuro */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px var(--sombra);
+  color: var(--color-secundario);
+}
+
+/* Encabezados de cada sección centrados */
+main section h2 {
+  font-family: var(--fuente-titulos);
+  color: #CCCCCC; /* Tono más tenue para los subtítulos */
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos dentro de las secciones */
+main section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Sección de "Nuestros Valores" sin contenedores individuales */
+#valores ul {
+  list-style: none; /* Quita los bullets */
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#valores li {
+  display: inline; /* Muestra los valores en línea */
+  font-size: 1.1rem;
+  color: var(--color-secundario);
+  /* Separamos con un pequeño padding; el separador se insertará con :not(:last-child) */
+  padding: 0 5px;
+}
+
+/* Agrega una coma y espacio después de cada valor, excepto el último */
+#valores li:not(:last-child)::after {
+  content: ", ";
+}
+
+/* Media Queries para dispositivos medianos y pequeños */
+@media screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+    gap: 30px;
+  }
+  
+  main section p {
+    font-size: 1rem;
+  }
+  
+  #valores li {
+    font-size: 1rem;
+    padding: 0 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main section p {
+    font-size: 0.9rem;
+  }
+}

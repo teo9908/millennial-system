@@ -1,0 +1,132 @@
+/* admin.css */
+
+/* Contenedor principal del contenido administrativo */
+.admin-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sidebar lateral */
+.admin-sidebar {
+  background-color: var(--color-fondo);
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.admin-sidebar ul li a {
+  text-decoration: none;
+  color: #34495e;
+  padding: 10px;
+  display: block;
+  border: 1px solid #34495e;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.admin-sidebar ul li a:hover,
+.admin-sidebar ul li a.active {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+/* Área principal del contenido */
+.admin-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Tarjetas internas */
+.admin-card {
+  background-color: var(--color-fondo);
+  border: 1px solid #333;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px var(--sombra);
+  margin-bottom: 20px;
+}
+
+/* Formularios */
+.admin-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.admin-card input,
+.admin-card select,
+.admin-card textarea,
+.admin-card button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #34495e;
+  font-size: 1rem;
+}
+
+.admin-card button {
+  background-color: #34495e;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-card button:hover {
+  background-color: #2c3e50;
+}
+
+/* Tabla de productos */
+#tabla-productos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tabla-productos th,
+#tabla-productos td {
+  border: 1px solid #34495e;
+  padding: 10px;
+  text-align: left;
+}
+
+#tabla-productos thead {
+  background-color: #34495e;
+  color: #ffffff;
+}
+
+.btn-editar,
+.btn-eliminar {
+  margin-right: 8px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background-color: #6c63ff;
+  color: #fff;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: #fff;
+}

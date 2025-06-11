@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Millennial System</title>
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/components/buttons.css">
+  <link rel="stylesheet" href="/css/components/alerts.css">
+  <link rel="stylesheet" href="/css/pages/register.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <a href="/views/home.html">
+            <h1>Millennial System</h1>
+          </a>
+        </div>
+
+        <div class="header-right">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="/views/home.html">Inicio</a></li>
+        <li><a href="/views/catalog.html">Productos</a></li>
+        <li><a href="/views/categories.html">Categorías</a></li>
+        <li><a href="/views/contact.html">Contacto</a></li>
+        <li><a href="/views/login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="registro">
+        <div id="alerta" class="alerta" style="display: none;"></div>
+        <h2>Regístrate</h2>
+        <form id="register-form">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required>
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required>
+
+          <label for="confirm-password">Confirmar Contraseña:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+
+          <button type="submit">Crear Cuenta</button>
+        </form>
+
+        <p class="login-link">¿Ya tienes una cuenta? <a href="/views/login.html">Inicia sesión aquí</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Millennial System - Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script type="module" src="/js/controllers/registerController.js"></script>
+  <script type="module" defer src="/js/controllers/navbarController.js"></script>
+</body>
+
+</html>

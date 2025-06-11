@@ -1,0 +1,140 @@
+/* home.css - Estilos específicos para la página principal (home) sin hero */
+
+/* Forzar que los elementos hijos de <main> se apilen verticalmente y se centren */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====================
+   Carrusel Principal
+   ==================== */
+.carrusel-principal {
+    position: relative;
+    width: 80%;
+    max-width: 400px;      /* Tamaño máximo del carrusel */
+    height: 400px;         /* Contenedor cuadrado */
+    margin: 20px auto;     /* Centrado horizontal y margen vertical */
+    overflow: hidden;      /* Oculta las partes excedentes */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    display: block;   
+}
+
+.carrusel-principal .imagenes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.carrusel-principal img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ====================
+   Barra Horizontal de Categorías
+   ==================== */
+.barra-horizontal {
+    margin-top: 50px; /* Espaciado para evitar sobresaturación visual */
+}
+
+.barra-horizontal ul {
+    display: flex; /* Diseño en fila */
+    justify-content: space-around; /* Distribución uniforme entre imágenes */
+    align-items: center; /* Alinea verticalmente */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 125px; /* Incrementa el espacio entre elementos */
+}
+
+.barra-horizontal li {
+    display: flex;
+    flex-direction: column; /* El texto se coloca debajo de la imagen */
+    align-items: center;
+    text-align: center;
+}
+
+.barra-horizontal img {
+    width: 250px; /* Tamaño fijo para las imágenes */
+    height: 250px;
+    object-fit: cover; /* Asegura que la imagen llene el contenedor sin distorsión */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 0;
+}
+
+.barra-horizontal span {
+    margin-top: 25px; /* Espacio entre imagen y texto */
+    font-size: 25px; /* Texto más grande para facilitar la visibilidad */
+    font-weight: bold;
+    color: #F5FBEF;
+}
+
+/* (Opcional) Estilos para los botones debajo de la barra */
+.barra-horizontal .botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.barra-horizontal button {
+    background-color: #46658C;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #F5FBEF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.9s ease;
+}
+
+.barra-horizontal button:hover {
+    background-color: #F24171;
+}
+
+.barra-horizontal button:nth-child(1)::before {
+    content: '◄';
+}
+
+.barra-horizontal button:nth-child(2)::before {
+    content: '►';
+}
+
+.barra-horizontal img:hover {
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    transform: scale(1.20);
+    transition: all 0.8s ease;
+}
+
+/* ====================
+   Media Queries
+   ==================== */
+@media (max-width: 768px) {
+    .carrusel-principal {
+        width: 90%;
+        height: 300px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel-principal {
+        width: 100%;
+        height: 250px;
+        margin: 20px auto;
+    }
+}

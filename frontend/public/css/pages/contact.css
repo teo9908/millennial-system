@@ -1,0 +1,64 @@
+/* frontend/public/css/pages/contact.css */
+
+/* Estilos para la sección de contacto */
+#contacto {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #1b1b24; /* Color oscuro congruente con el tema */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  color: var(--color-secundario);
+}
+
+#contacto h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#contacto p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contacto form label {
+  font-weight: bold;
+}
+
+#contacto form input,
+#contacto form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  outline: 2px solid var(--color-primario);
+}
+
+#contacto form button {
+  align-self: center;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contacto form button:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+}

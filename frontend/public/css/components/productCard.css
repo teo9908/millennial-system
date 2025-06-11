@@ -1,0 +1,83 @@
+/* 🔹 Contenedor de producto */
+.producto {
+    background-color: var(--color-fondo);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px var(--sombra);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Efecto `hover` en producto */
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px var(--sombra);
+}
+
+/* 🔹 Imagen del producto */
+.producto img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px; /* Altura fija para evitar diferencias visuales */
+    object-fit: cover; /* Evita imágenes desproporcionadas */
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+/* 🔹 Efecto `hover` en imagen */
+.producto img:hover {
+    transform: scale(1.05);
+}
+
+/* 🔹 Título y descripción */
+.producto h3 {
+    font-family: var(--fuente-titulos);
+    font-size: 20px;
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.producto p {
+    font-size: 16px;
+    color: var(--color-secundario);
+    margin-bottom: 15px;
+}
+
+/* 🔹 Botón de acción */
+.producto button {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: var(--color-hover);
+    transform: scale(1.10);
+    opacity: 0.9; /* Hace que el hover sea más fluido */
+}
+
+
+@media (max-width: 480px) {
+    .producto {
+        padding: 10px;
+    }
+
+    .producto img {
+        max-width: 120px;
+        height: 120px;
+    }
+
+    .producto h3 {
+        font-size: 16px;
+    }
+
+    .producto p {
+        font-size: 12px;
+    }
+}

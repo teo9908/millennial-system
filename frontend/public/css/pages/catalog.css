@@ -1,0 +1,77 @@
+/* 🔹 Ajuste de fondo y estructura */
+#contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--color-fondo);
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 🔹 Producto individual */
+.producto {
+  background: #2c3e50;  
+  border: 1px solid #4c667e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6); /* Sombra más definida */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* 🔹 Hover en producto */
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Sombra más profunda */
+  background: #526b86;
+}
+
+/* 🔹 Imágenes de los productos */
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px; /* Bordes más suaves */
+}
+
+/* 🔹 Títulos de los productos */
+.producto h3 {
+  margin: 16px 0;
+  font-size: 1.4rem;
+  color: var(--color-secundario);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* Sombra más nítida */
+  font-family: var(--fuente-titulos);
+}
+
+/* 🔹 Mensaje de error */
+.mensaje-error {
+  text-align: center;
+  background: #34495e;
+  color: #F24171; /* Color de error más suave */
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  min-height: 120px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.6); /* Sombra adicional */
+}
+
+/* 🔹 Botón para resetear búsqueda */
+.btn-reset {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 20px;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-reset:hover {
+  background-color: var(--color-hover);
+  transform: scale(1.05);
+  opacity: 0.9; /* Suaviza el efecto */
+}

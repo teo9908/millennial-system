@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Millennial System</title>
+  <!-- Enlaces a hojas de estilo -->
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/components/buttons.css">
+  <link rel="stylesheet" href="/css/pages/home.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <a href="/views/home.html">
+            <h1>Millennial System</h1>
+          </a>
+        </div>
+        <div class="header-right">
+          <div class="search-container">
+            <input type="text" id="product-search" placeholder="Buscar productos..." />
+            <button id="search-btn">Buscar</button>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <!-- Menú lateral desplegable -->
+      <nav id="menu" class="menu">
+        <ul>
+          <li><a href="/views/home.html">Inicio</a></li>
+          <li><a href="/views/catalog.html">Productos</a></li>
+          <li><a href="/views/contact.html">Contacto</a></li>
+          <li><a href="/views/about.html">Nosotros</a></li>
+          <li><a href="/views/login.html">Login</a></li>
+          <li><a href="/views/admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- Main -->
+    <main>
+      <!-- Barra lateral de redes sociales -->
+      <aside id="redes-sociales">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/facebook.jpg" alt="Icono de Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/instagram.jpg" alt="Icono de Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/twitter.jpg" alt="Icono de Twitter" />
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Carrusel principal -->
+      <section id="carrusel-principal" class="carrusel-principal">
+        <div class="imagenes">
+          <!-- Aquí se carga la imagen del carrusel -->
+          <img id="carousel-img" src="" alt="Imagen del carrusel">
+        </div>
+      </section>
+
+      <!-- Barra horizontal para categorías -->
+      <section id="barra-categorias-horizontal" class="barra-horizontal">
+        <ul id="lista-categorias-horizontal">
+          <li data-nombre="Teclados"><img src="/assets/teclados.jpg" alt="Teclados"><span>Teclados</span></li>
+          <li data-nombre="Ratones"><img src="/assets/ratones.jpg" alt="Ratones"><span>Ratones</span></li>
+          <li data-nombre="Diademas"><img src="/assets/diademas.jpg" alt="Diademas"><span>Diademas</span></li>
+          <li data-nombre="Chasis"><img src="/assets/chasis.jpg" alt="Chasis"><span>Chasis</span></li>
+          <li data-nombre="Monitores"><img src="/assets/monitores.jpg" alt="Monitores"><span>Monitores</span></li>
+        </ul>
+      </section>
+
+      <!-- Contenedor para mostrar productos filtrados -->
+      <section id="productos-contenedor" class="productos"></section>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Millennial System - Todos los derechos reservados.</p>
+    </footer>
+  </div>
+  <script type="module" src="/js/controllers/homeController.js"></script>
+  <script type="module" defer src="/js/controllers/navbarController.js"></script>
+</body>
+
+</html>

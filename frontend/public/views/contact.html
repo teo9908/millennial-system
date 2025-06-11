@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Millennial System</title>
+  <!-- Rutas absolutas para las hojas de estilo -->
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/components/buttons.css">
+  <link rel="stylesheet" href="/css/pages/contact.css" />
+</head>
+
+<body>
+  <!-- Contenedor principal (wrapper) para asegurar que el footer se mantenga en la parte baja -->
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <a href="/views/home.html">
+            <h1>Millennial System</h1>
+          </a>
+        </div>
+
+        <!-- Lado Derecho: Solo Menú de Hamburguesa -->
+        <div class="header-right">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú Lateral Desplegable -->
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="/views/home.html">Inicio</a></li>
+        <li><a href="/views/catalog.html">Productos</a></li>
+        <li><a href="/views/categories.html">Categorías</a></li>
+        <li><a href="/views/login.html">Login</a></li>
+        <li><a href="/views/about.html">Nosotros</a></li>
+        <li><a href="/views/admin.html">Admin</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sección de contacto -->
+    <main>
+      <!-- Barra lateral de redes sociales -->
+      <aside id="redes-sociales">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/facebook.jpg" alt="Icono de Facebook" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/instagram.jpg" alt="Icono de Instagram" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/icons/twitter.jpg" alt="Icono de Twitter" />
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Déjanos tu mensaje y nos pondremos en contacto contigo lo antes posible.</p>
+        <form action="#" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+          <button type="submit">Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Millennial System - Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script type="module" defer src="/js/controllers/navbarController.js"></script>
+  <script type="module" defer src="/js/controllers/contactController.js"></script>
+</body>
+
+</html>

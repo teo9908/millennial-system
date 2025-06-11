@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Millennial System</title>
+  <!-- Rutas absolutas para las hojas de estilo -->
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components/navbar.css">
+  <link rel="stylesheet" href="/css/components/buttons.css">
+  <link rel="stylesheet" href="/css/components/alerts.css">
+  <link rel="stylesheet" href="/css/pages/login.css">
+</head>
+
+<body>
+  <!-- Contenedor principal (wrapper) -->
+  <div class="wrapper">
+
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <div class="brand">
+          <a href="/views/home.html">
+            <h1>Millennial System</h1>
+          </a>
+        </div>
+        <div class="header-right">
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Menú Lateral Desplegable -->
+    <nav id="menu" class="menu">
+      <ul>
+        <li><a href="/views/home.html">Inicio</a></li>
+        <li><a href="/views/catalog.html">Productos</a></li>
+        <li><a href="/views/categories.html">Categorías</a></li>
+        <li><a href="/views/contact.html">Contacto</a></li>
+        <li><a href="/views/about.html">Nosotros</a></li>
+        <li><a href="/views/admin.html">Admin</a></li>
+        
+      </ul>
+    </nav>
+
+    <!-- Sección de Login -->
+    <main>
+      <section id="login">
+
+        <div id="alerta" class="alerta" style="display: none;"></div>
+
+        <h2>Iniciar Sesión</h2>
+        <p>Accede a tu cuenta para continuar.</p>
+
+        <form action="#" method="POST">
+          <label for="correo">Correo Electrónico:</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="submit">Ingresar</button>
+        </form>
+
+        <p class="registro">¿No tienes una cuenta? <a href="/views/register.html">Regístrate aquí</a></p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Millennial System - Todos los derechos reservados.</p>
+    </footer>
+  </div>
+
+  <script type="module" defer src="/js/controllers/navbarController.js"></script>
+  <script type="module" defer src="/js/controllers/loginController.js"></script>
+</body>
+
+</html>
