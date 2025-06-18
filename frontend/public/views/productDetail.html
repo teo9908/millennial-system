@@ -26,9 +26,7 @@
             <button id="search-btn">Buscar</button>
           </div>
           <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
           </div>
         </div>
       </div>
@@ -47,33 +45,24 @@
 
     <main>
       <h1>Detalles del Producto</h1>
+
       <aside id="redes-sociales">
         <ul>
-          <li>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/icons/facebook.jpg" alt="Icono de Facebook" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/icons/instagram.jpg" alt="Icono de Instagram" />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/icons/twitter.jpg" alt="Icono de Twitter" />
-            </a>
-          </li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/facebook.jpg" alt="Facebook" /></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/instagram.jpg" alt="Instagram" /></a></li>
+          <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img src="/assets/icons/twitter.jpg" alt="Twitter" /></a></li>
         </ul>
       </aside>
 
-      <!-- Contenedor principal de detalle del producto -->
       <div id="producto-detalle">
-        <!-- Contenedor para la imagen -->
-        <div id="imagen-container">
-          <img id="producto-imagen" src="/assets/products/default.jpg" alt="Imagen del producto" />
+        <!-- Carrusel de imagen -->
+        <div id="imagen-container" class="slider-container">
+          <button class="slider-btn" id="prev-btn">&#10094;</button>
+          <img id="slider-imagen" class="producto-img" src="/assets/products/default.png" alt="Imagen del producto" />
+          <button class="slider-btn" id="next-btn">&#10095;</button>
         </div>
-        <!-- Contenedor para la información -->
+
+        <!-- Información del producto -->
         <div id="info-container">
           <h2 id="producto-nombre"></h2>
           <p id="producto-descripcion"></p>
@@ -89,7 +78,7 @@
     </footer>
   </div>
 
-  <!-- Carga de controladores -->
+  <!-- Controladores -->
   <script type="module" defer src="/js/controllers/productDetailController.js"></script>
   <script type="module" defer src="/js/controllers/navbarController.js"></script>
 </body>

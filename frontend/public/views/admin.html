@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +24,9 @@
     <header>
       <div class="header-container">
         <div class="brand">
-          <a href="/views/home.html"><h1>Millennial System</h1></a>
+          <a href="/views/home.html">
+            <h1>Millennial System</h1>
+          </a>
         </div>
         <div class="header-right">
           <button id="cerrar-sesion">Cerrar sesión</button>
@@ -63,12 +66,30 @@
             <input type="text" name="nombre" placeholder="Nombre" required />
             <input type="text" name="descripcion" placeholder="Descripción" required />
             <input type="number" step="0.01" name="precio" placeholder="Precio" required />
-            <input type="text" name="categoria_codigo" placeholder="Categoría" required />
+            <select name="categoria_codigo" id="categoria-select-agregar" required>
+              <option value="">Seleccione una categoría</option>
+            </select>
             <input type="number" name="stock" placeholder="Stock" required />
-            <input type="text" name="imagenes" placeholder="Ruta de imagen" />
+
+            <div id="contenedor-imagenes-agregar">
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 1" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 2" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 3" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+            </div>
+
             <button type="submit">Agregar</button>
           </form>
         </section>
+
 
         <section id="vista-actualizar" class="admin-card" style="display: none;">
           <h2>Actualizar Producto</h2>
@@ -77,12 +98,30 @@
             <input type="text" name="nombre" placeholder="Nombre" required />
             <input type="text" name="descripcion" placeholder="Descripción" required />
             <input type="number" step="0.01" name="precio" placeholder="Precio" required />
-            <input type="text" name="categoria_codigo" placeholder="Categoría" required />
+            <select name="categoria_codigo" id="categoria-select-actualizar" required>
+              <option value="">Seleccione una categoría</option>
+            </select>
             <input type="number" name="stock" placeholder="Stock" required />
-            <input type="text" name="imagenes" placeholder="Ruta de imagen" />
+
+            <div id="contenedor-imagenes-actualizar">
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 1" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 2" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+              <div class="campo-imagen">
+                <input type="text" name="imagenes" placeholder="Ruta imagen 3" />
+                <label><input type="checkbox" class="sin-imagen-checkbox" /> Sin imagen</label>
+              </div>
+            </div>
+
             <button type="submit">Actualizar</button>
           </form>
         </section>
+
 
         <section id="vista-eliminar" class="admin-card" style="display: none;">
           <h2>Eliminar Producto</h2>
@@ -114,5 +153,5 @@
   <script type="module" src="/js/controllers/adminController.js"></script>
   <script type="module" defer src="/js/controllers/navbarController.js"></script>
 </body>
-</html>
 
+</html>

@@ -46,12 +46,14 @@ Millennial System/
     npm install
 
 3. Crea un archivo .env en la raíz dela carpeta backend   
-    MONGO_URI=tu_conexion_a_mongodb
-    JWT_SECRET=tu_clave_secreta
+    MONGO_URI=mongodb+srv://mateoagudelo9908:querty123456@cluster0.voucscj.mongodb.net/MillennialSystemCatalog?retryWrites=true&w=majority&appName=Cluster0
     PORT=5000
+    JWT_SECRET=O7c@3zM2!tHsP5$xKgN1rB9eW8v
+
 
 
 4. Inicia el servidor
     node server.js
 
-5. Abrir manualmente el frontend en el 
+5. Abrir manualmente el frontend
+    Abrir en el navegador la ruta http://localhost:5000
