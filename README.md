@@ -46,9 +46,9 @@ Millennial System/
     npm install
 
 3. Crea un archivo .env en la raíz dela carpeta backend   
-    MONGO_URI=mongodb+srv://mateoagudelo9908:querty123456@cluster0.voucscj.mongodb.net/MillennialSystemCatalog?retryWrites=true&w=majority&appName=Cluster0
-    PORT=5000
-    JWT_SECRET=O7c@3zM2!tHsP5$xKgN1rB9eW8v
+   MONGO_URI=<tu URI de conexión de MongoDB Atlas>
+   PORT=5000
+   JWT_SECRET=<una clave secreta segura para firmar tokens>
 
 
 
