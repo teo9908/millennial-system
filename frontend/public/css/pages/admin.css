@@ -169,3 +169,93 @@
   background-position: right 12px center;
   background-size: 14px;
 }
+
+/* ====================
+   Media Queries
+   ==================== */
+@media (max-width: 1024px) {
+  .admin-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .admin-content {
+    padding: 10px;
+  }
+
+  .admin-card form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #tabla-productos {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-card input,
+  .admin-card select,
+  .admin-card textarea,
+  .admin-card button {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .btn-editar,
+  .btn-eliminar {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  .admin-sidebar ul li a {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-card {
+    padding: 16px;
+  }
+
+  .admin-sidebar {
+    padding: 12px;
+  }
+
+  .admin-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .admin-sidebar ul li {
+    width: 45%;
+  }
+
+  .admin-sidebar ul li a {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  #tabla-productos th,
+  #tabla-productos td {
+    padding: 6px;
+  }
+
+  #btn-agregar-imagen-agregar,
+  #btn-agregar-imagen-actualizar {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px;
+    text-align: center;
+  }
+}

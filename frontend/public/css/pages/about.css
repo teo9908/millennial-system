@@ -79,3 +79,32 @@ main section p {
     font-size: 0.9rem;
   }
 }
+
+@media screen and (max-width: 480px) {
+  main {
+    gap: 24px;
+  }
+
+  main section {
+    padding: 20px;
+  }
+
+  main section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  main section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  #valores li {
+    display: block;
+    padding: 4px 0;
+  }
+
+  #valores li:not(:last-child)::after {
+    content: "";
+  }
+}

@@ -19,3 +19,18 @@
   color: #9f1239;
   border: 1px solid #fca5a5;
 }
+
+@media (max-width: 768px) {
+  .alerta {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .alerta {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}

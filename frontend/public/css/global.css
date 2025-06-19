@@ -179,7 +179,45 @@ main {
 
 /* 🔹 Media Queries para adaptación */
 @media (max-width: 768px) {
-  body {
+  main {
+    padding: 12px;
+    flex-direction: column;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 350px;
+    margin: 12px auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer {
     font-size: 14px;
+    height: auto;
+    padding: 16px;
+  }
+
+  #redes-sociales {
+    right: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+    display: flex;
+    flex-direction: column;
   }
 }

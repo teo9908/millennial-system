@@ -87,3 +87,60 @@
 .registro a:hover {
     text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+  #login {
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  #login h2 {
+    font-size: 22px;
+  }
+
+  #login p {
+    font-size: 15px;
+  }
+
+  #login input {
+    font-size: 15px;
+    padding: 9px;
+  }
+
+  #login button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .registro {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  #login {
+    margin: 20px 12px;
+    padding: 18px;
+  }
+
+  #login h2 {
+    font-size: 20px;
+  }
+
+  #login input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #login button {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .registro {
+    text-align: center;
+    font-size: 12px;
+  }
+}

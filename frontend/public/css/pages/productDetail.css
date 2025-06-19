@@ -105,7 +105,10 @@
   transform: scale(1.05);
 }
 
-/* Responsividad para pantallas medianas y pequeñas */
+/* ====================
+   Media Queries
+   ==================== */
+   
 @media (max-width: 768px) {
   #producto-detalle {
     flex-direction: column;
@@ -132,5 +135,57 @@
   .slider-btn {
     font-size: 1.5rem;
     padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #producto-detalle {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .producto-img {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--sombra);
+  }
+
+  #info-container {
+    gap: 16px;
+  }
+
+  #info-container h2 {
+    font-size: 1.5rem;
+  }
+
+  #info-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  #agregar-carrito {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .slider-btn {
+    font-size: 1.2rem;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  #producto-detalle {
+    padding: 12px;
+  }
+
+  #info-container h2 {
+    font-size: 1.3rem;
+  }
+
+  .slider-btn {
+    font-size: 1rem;
+    padding: 4px 6px;
   }
 }

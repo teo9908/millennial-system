@@ -58,3 +58,30 @@ button:disabled {
     font-size: 18px;
     padding: 14px 28px;
 }
+
+@media (max-width: 768px) {
+  button,
+  .btn-large {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .btn-circle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  button,
+  .btn-large {
+    font-size: 14px;
+    padding: 10px 16px;
+    width: 100%;
+  }
+
+  .btn-circle {
+    width: 32px;
+    height: 32px;
+  }
+}

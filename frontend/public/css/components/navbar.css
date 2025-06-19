@@ -118,10 +118,63 @@
   background-color: #F24171;
 }
 
+
 /* ------------------------------
-   Adaptabilidad para Pantallas Grandes
+   Media Queries
 ------------------------------ */
-@media (min-width: 768px) {
-  /* Si lo deseas, en desktop puedes optar por mantener el menú lateral o cambiar la distribución */
-  /* Por ejemplo, podrías ocultar el ícono de hamburguesa para mostrar un menú horizontal */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .header-left h1 {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-container input {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .search-container button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 12px;
+  }
+
+  .header-left h1 {
+    font-size: 24px;
+  }
+
+  .hamburger span {
+    width: 20px;
+    height: 2px;
+    margin: 4px 0;
+  }
+
+  .menu {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+    padding: 12px;
+  }
 }
