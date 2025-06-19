@@ -80,18 +80,25 @@
 .menu {
   position: fixed;
   top: 0;
-  right: -300px;  /* Menú oculto inicialmente */
+  right: 0;
   width: 300px;
   height: 100%;
   background: linear-gradient(135deg, #04080D, #16161d);
-  transition: right 0.3s ease;
+  transform: translateX(100%); /* completamente fuera de pantalla */
+  transition: transform 0.3s ease;
   z-index: 999;
-  padding-top: 60px; /* Para no solaparse con el header */
+  padding-top: 60px;
+  overflow-y: auto;
+  border-left: 1px solid #333;
+  visibility: hidden; /* evita parpadeo inicial */
 }
 
 .menu.active {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
 }
+
+
 
 .menu ul {
   list-style: none;

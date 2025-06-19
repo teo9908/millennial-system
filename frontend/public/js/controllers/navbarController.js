@@ -1,38 +1,44 @@
 // navbarController.js
+
+const menu = document.getElementById("menu");
+const hamburger = document.getElementById("hamburger");
+
+// 🔐 Asegura que el menú esté oculto desde el arranque
+if (menu && hamburger) {
+  menu.classList.remove("active");
+  hamburger.classList.remove("active");
+  menu.style.visibility = "hidden"; // evita render inesperado
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const menu = document.getElementById("menu");
-
-  // Cierra el menú si venís de otra vista con él abierto
-  if (menu && menu.classList.contains("active")) {
-    menu.classList.remove("active");
-  }
-
-  // Toggle del menú hamburguesa
-  if (hamburger && menu) {
+  if (menu && hamburger) {
+    // Muestra el menú al activarlo
     hamburger.addEventListener("click", () => {
-      menu.classList.toggle("active");
+      const isActive = menu.classList.toggle("active");
       hamburger.classList.toggle("active");
+      menu.style.visibility = isActive ? "visible" : "hidden";
+    });
+
+    // Cierra el menú al hacer clic en cualquier enlace
+    document.querySelectorAll("#menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        menu.style.visibility = "hidden";
+      });
+    });
+
+    // Cierra el menú al hacer clic fuera de él
+    document.addEventListener("click", (e) => {
+      const clickedInsideMenu = menu.contains(e.target);
+      const clickedHamburger = hamburger.contains(e.target);
+      if (!clickedInsideMenu && !clickedHamburger) {
+        menu.classList.remove("active");
+        hamburger.classList.remove("active");
+        menu.style.visibility = "hidden";
+      }
     });
   }
-
-  // Cierra el menú al hacer clic en cualquier enlace
-  document.querySelectorAll("#menu a").forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-    });
-  });
-
-  // Cierra el menú al hacer clic fuera de él
-  document.addEventListener("click", (e) => {
-    const clickedInsideMenu = menu.contains(e.target);
-    const clickedHamburger = hamburger.contains(e.target);
-    if (!clickedInsideMenu && !clickedHamburger) {
-      menu.classList.remove("active");
-      hamburger.classList.remove("active");
-    }
-  });
 
   // Búsqueda de productos
   const searchInput = document.getElementById("product-search");
@@ -48,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Utilidad para obtener una imagen del producto
+  // Utilidad para obtener imagen de producto
   function obtenerImagenProducto(producto) {
     let imagen = "";
 
@@ -64,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       imagen = `/assets/products/${imagen}`;
     }
 
-    if (typeof imagen === "string" && imagen.endsWith(".jpg")) {
+    if (imagen.endsWith(".jpg")) {
       imagen = imagen.replace(".jpg", ".png");
     }
 
